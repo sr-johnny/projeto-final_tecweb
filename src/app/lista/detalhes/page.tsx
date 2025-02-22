@@ -7,7 +7,7 @@ interface ListItem {
   text: string;
 }
 
-export default function Lista() {
+export default function Detalhes() {
   const [items, setItems] = useState<ListItem[]>([]);
 
   // Carrega itens do localStorage ao iniciar
@@ -30,21 +30,16 @@ export default function Lista() {
   return (
     <div className="justify-center pl-24 pr-24">
       <h1 className="text-4xl mt-12 text-center font-[family-name:var(--font-geist-mono)]">
-        Lista da Atividades
+      Detalhes da Atividade
       </h1>
       <div className="flex justify-around pl-24 pr-24 flex-row mt-16 mb-4">
-        <p className="text-2xl font-[family-name:var(--font-geist-mono)]">
-          Nome da Atividade
-        </p>
-        <p className="text-2xl font-[family-name:var(--font-geist-mono)]">
-          Responsável
-        </p>
+        <h2>Nome da Atividade: </h2>
       </div>
       <ul className="list">
         <div className="pt-0 pb-4 ml-60 mr-60 rounded-xl border border-solid border-black/[.08] dark:border-white/[.145]">
           {items.map((item) => (
             <li key={item.id} className="list-item">
-              <a href="lista/detalhes" className="flex justify-between rounded-lg border dark:border-white/[.145] pl-12 pr-12 text-xl mt-6 font-[family-name:var(--font-geist-mono)]">
+              <a href="detalhes" className="flex justify-between rounded-lg border dark:border-white/[.145] pl-12 pr-12 text-xl mt-6 font-[family-name:var(--font-geist-mono)]">
                 <p>{item.name}</p>
                 <p>{item.resp}</p>
               </a>

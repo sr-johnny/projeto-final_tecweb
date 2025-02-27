@@ -38,9 +38,14 @@ export default function Lista() {
         <p className="text-2xl font-[family-name:var(--font-geist-mono)]">
           Nome da Atividade
         </p>
+        <div className="flex flex-row justify-between w-1/5">
+        <p className="text-2xl font-[family-name:var(--font-geist-mono)]">
+          Editar
+        </p>
         <p className="text-2xl font-[family-name:var(--font-geist-mono)]">
           Excluir
         </p>
+        </div>
       </div>
       <ul className="list">
         <div className="pt-1 self-center bg-black p-6 rounded-lg">
@@ -50,6 +55,16 @@ export default function Lista() {
                 <a target="_blank" href={`lista/detalhes?id=${item.id}`}>
                   <p>{item.name}</p>
                 </a>
+                <div className="flex flex-row justify-between w-2/12">
+                <a className="mb-2 ml-6" href={`lista/editar?id=${item.id}`}>
+                  <Image
+                    src="/edit.png"
+                    className="dark:invert"
+                    alt="Icone Lista"
+                    width={25}
+                    height={25}
+                  />
+                </a>
                 <button className="mb-2" onClick={() => handleDelete(item.id)}>
                   <Image
                     src="/delete.png"
@@ -58,6 +73,7 @@ export default function Lista() {
                     height={25}
                   />
                 </button>
+                </div>
               </div>
             </li>
           ))}

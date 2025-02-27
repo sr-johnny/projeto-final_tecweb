@@ -1,3 +1,13 @@
+## Aluno e Informações:
+
+### **Ismael Johnny Marques Ferreira**
+- Matrícula: 398901
+- E-mal: johnny12mf@gmail.com
+
+### Link de demonstração (Youtube):
+- https://youtu.be/aQ3vl4CppII
+<hr/>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
